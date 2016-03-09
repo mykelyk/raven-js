@@ -675,7 +675,7 @@ function getHttpData() {
         }
     };
 
-    http.url = document.location.href;
+    http.url = document.location.href.replace(/#/, '@');
 
     if (document.referrer) {
         http.headers.Referer = document.referrer;

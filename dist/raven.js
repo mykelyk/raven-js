@@ -1,10 +1,10 @@
-/*! Raven.js 1.1.22 (6278810) | github.com/getsentry/raven-js */
+/*! Raven.js 1.1.22 (6ee13f3) | github.com/getsentry/raven-js */
 
 /*
  * Includes TraceKit
  * https://github.com/getsentry/TraceKit
  *
- * Copyright 2015 Matt Robenolt and other contributors
+ * Copyright 2016 Matt Robenolt and other contributors
  * Released under the BSD license
  * https://github.com/getsentry/raven-js/blob/master/LICENSE
  *
@@ -1753,7 +1753,7 @@ function getHttpData() {
         }
     };
 
-    http.url = document.location.href;
+    http.url = document.location.href.replace(/#/, '@');
 
     if (document.referrer) {
         http.headers.Referer = document.referrer;
